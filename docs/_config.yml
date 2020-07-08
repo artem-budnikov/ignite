@@ -1,0 +1,29 @@
+exclude: [guidelines.md,  "Gemfile", "Gemfile.lock", README.adoc, "_docs/code-snippets", "_docs/includes", '*.sh']
+version: {version}
+url_prefix: /docs/{version} 
+base_url: /docs/latest 
+versioning_script: versioning.js
+collections:
+  docs:
+    permalink: /docs/{version}/:path:output_ext
+    output: true
+defaults:
+  -
+    scope:
+      path: ''
+    values:
+      layout: 'doc'
+  -
+    scope:
+      path: '_docs'
+    values:
+      toc: ignite 
+asciidoctor:
+  base_dir: _docs/ 
+  attributes:
+    source-highlighter: rouge
+    stylesdir: assets/css
+    version: {version}
+    imagesdir: /docs/{version}
+    base_url: /docs/latest
+    table-stripes: even

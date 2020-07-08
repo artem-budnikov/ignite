@@ -1,1 +1,25 @@
 = Apache Ignite Documentation
+
+== How to Build
+
+=== Prerequisites
+
+* Jekyll. Follow this instructions to install jekyll: https://jekyllrb.com/docs/installation/
+* Alternatively, use Jekyll docker image
+
+=== Runing the Docs Locally
+
+[source, shell]
+----
+bundly exec jekyll s
+----
+
+
+With Docker:
+
+[source, shell]
+----
+docker run -v "$PWD:/srv/jekyll" -p 4000:4000 jekyll/jekyll:latest jekyll s
+----
+
+== How to Contribute
