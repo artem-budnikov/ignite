@@ -25,6 +25,7 @@ class TabsBlock < Asciidoctor::Extensions::BlockProcessor
     end
   end
 
+
   def process parent, reader, attrs
     lines = reader.lines
 
@@ -53,6 +54,7 @@ class TabsBlock < Asciidoctor::Extensions::BlockProcessor
        html = html + render_tab(parent, name, options, tab_content, tabs.include?("XML"))
     end
 
+
     html = %(<code-tabs>#{html}</code-tabs>)
 
     create_pass_block parent, html, attrs
@@ -78,7 +80,9 @@ Extensions.register do
 #      base_url = parent.document.attributes['base_url'] + '/' + parent.document.attributes['version'] 
 #     end
      
-     base_url = parent.document.attributes['base_url'] 
+
+    base_url = parent.document.attributes['base_url'] 
+
    
      if (text = attrs['text']).empty?
        text = target
@@ -93,7 +97,6 @@ Extensions.register do
      if target.start_with? 'http','ftp', '/', '#'
      else 
        target = base_url + '/' + %(#{target})
-      #  target = %(#{target})
      end
 
      (create_anchor parent, text, type: :link, target: target, attributes: attrs).render

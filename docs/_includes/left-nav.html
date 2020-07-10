@@ -1,10 +1,10 @@
 
-{% assign normalized_path = page.url | replace: ".html","" | remove_first: site.url_prefix  %}
+{% assign normalized_path = page.url | replace: ".html","" | remove_first: site.base_url %}
+{{normalized_path }}
 {% if page.toc != false %}
 <nav class='left-nav' data-swiftype-index='false'>
 
-      {% for guide in site.data.toc.toc %}
-
+      {% for guide in site.data.toc %}
         <li>
             {% if guide.items %}
 

@@ -2,8 +2,11 @@
     padding: 10px 20px;
     width: 289px;
     overflow-y: auto;
-    height: calc(100vh - var(--header-height));
+/*    height: calc(100vh - var(--header-height)); */
     font-family: 'Open Sans';
+    padding-top: var(--padding-top);
+
+    --active-color: blue;
 
     li {
         list-style: none;
@@ -22,6 +25,9 @@
         font: inherit;
         text-align: left;
 
+        &.active, &:hover {
+            color: var(--active-color);
+        }
     }
 
 	*:focus {
@@ -30,11 +36,12 @@
 
     .nav-group {
         margin-left: 6px;
+        font-size: 14px;
     }
 
     nav {
         border-left: 2px solid #dddddd;
-        margin-top: 5px;
+//        margin-top: 5px;
         margin-bottom: 5px;
 
         &.collapsed {
@@ -47,7 +54,7 @@
         text-align: left;
 
         &.active {
-            border-left: var(--orange-line-thickness) solid ;
+            border-left: var(--orange-line-thickness) solid var(--active-color);
             padding-left: calc(20px - var(--orange-line-thickness));
         }
     }

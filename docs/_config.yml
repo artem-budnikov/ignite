@@ -1,11 +1,8 @@
 exclude: [guidelines.md,  "Gemfile", "Gemfile.lock", README.adoc, "_docs/code-snippets", "_docs/includes", '*.sh']
-version: {version}
-url_prefix: /docs/{version} 
-base_url: /docs/latest 
-versioning_script: versioning.js
+base_url: /docs
 collections:
   docs:
-    permalink: /docs/{version}/:path:output_ext
+    #    permalink: /docs/{version}/:path:output_ext
     output: true
 defaults:
   -
@@ -21,9 +18,13 @@ defaults:
 asciidoctor:
   base_dir: _docs/ 
   attributes:
+    attributes: *asciidoc_attributes
     source-highlighter: rouge
     stylesdir: assets/css
-    version: {version}
-    imagesdir: /docs/{version}
-    base_url: /docs/latest
+    version: "latest" 
+    base_url: /docs
+    imagesdir: /docs
     table-stripes: even
+    javadoc_base_url: https://ignite.apache.org/releases/latest/javadoc
+    javaCodeDir: code-snippets/java/src/main/java/org/apache/ignite/snippets
+
