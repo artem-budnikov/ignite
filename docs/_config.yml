@@ -18,13 +18,12 @@ defaults:
 asciidoctor:
   base_dir: _docs/ 
   attributes:
-    attributes: *asciidoc_attributes
     source-highlighter: rouge
     stylesdir: assets/css
     version: "latest" 
     base_url: /docs
     imagesdir: /docs
     table-stripes: even
-    javadoc_base_url: https://ignite.apache.org/releases/latest/javadoc
+    javadoc_base_url: https://ignite.apache.org/releases/{version}/javadoc
     javaCodeDir: code-snippets/java/src/main/java/org/apache/ignite/snippets
 

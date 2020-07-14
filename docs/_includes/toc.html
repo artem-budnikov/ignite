@@ -28,7 +28,7 @@
         </ul> 
     {% endif %}
 {% else %}  
-    {% for guide in site.data[page.toc].toc %}
+    {% for guide in site.data.toc %}
 
         <h2>  {{guide.title }} </h2>
         {% if guide.items %}

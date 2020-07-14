@@ -10,7 +10,7 @@ Ignite supports a number of logging libraries and frameworks:
 - JCL,
 - SLF4J.
 
-This page will show you how to set up the logger.
+This section shows you how to set up the logger.
 
 When a node starts, it outputs start-up information to the console, including the information about the configured logging library. Each logging library has its own configuration parameters and should be set up according to its official documentation. Besides library-specific configuration, there is a number of system properties that allow you to tune logging. These properties are presented in the following table.
 
@@ -20,7 +20,7 @@ When a node starts, it outputs start-up information to the console, including th
 | System Property | Description | Default Value
 | `IGNITE_LOG_INSTANCE_NAME` | If the property is set, Ignite includes its instance name in log messages. |  Not set
 | `IGNITE_QUIET` | Set to `false` to disable the quiet mode and enable the verbose mode.
-In the verbose mode, the node will log a lot more information. | `true`
+In the verbose mode, the node logs a lot more information. | `true`
 | `IGNITE_LOG_DIR` | The directory where Ignite writes log files. | `$IGNITE_HOME/
 work/log`
 | `IGNITE_DUMP_THREADS_ON_FAILURE` | Set to `true` to output thread dumps to the log when a critical error is caught. | `true`
@@ -88,7 +88,7 @@ tab:C++[unsupported]
 
 In the above example, the path to `log4j2-config.xml` can be either an absolute path, a local path relative to META-INF in classpath or to `IGNITE_HOME`. An example log4j2 configuration file can be found in the distribution package (`$IGNITE_HOME/config/ignite-log4j2.xml`).
 
-NOTE: Log4j2 supports runtime reconfiguration, i.e. changes in the configuration file will be applied without the need to restart the application.
+NOTE: Log4j2 supports runtime reconfiguration, i.e. changes in the configuration file is applied without the need to restart the application.
 
 == Using JCL
 NOTE: Before using JCL, enable the link:developers-guide/setup#enabling-modules[ignite-jcl] module.
@@ -158,7 +158,7 @@ See link:developers-guide/starting-nodes#setting-jvm-options[Setting JVM Options
 
 == Logging Configuration Example
 
-The following steps will guide you through the process of configuring logging. This should be suitable for most cases.
+The following steps guide you through the process of configuring logging. This should be suitable for most cases.
 
 . Use either Log4j or Log4j2 as the logging framework. To enable it, follow the instructions provided in the corresponding section above.
 . If you use the default configuration file (either `ignite-log4j.xml` or `ignite-log4j2.xml`), uncomment the CONSOLE appender.

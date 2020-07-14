@@ -6,7 +6,6 @@
     font-family: 'Open Sans';
     padding-top: var(--padding-top);
 
-    --active-color: blue;
 
     li {
         list-style: none;
@@ -26,7 +25,7 @@
         text-align: left;
 
         &.active, &:hover {
-            color: var(--active-color);
+            color: var(--link-color);
         }
     }
 

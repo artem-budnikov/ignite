@@ -1,4 +1,4 @@
-pre, pre.pygments {
+pre, pre.rouge {
     padding: 8px 15px;
     background: var(--block-code-background) !important;
     border-radius: 5px;
@@ -6,7 +6,7 @@ pre, pre.pygments {
     overflow-x: auto;
     // So code copy button doesn't overflow
     min-height: 36px;
-	line-height: 16px;
+	line-height: 18px;
     color: #545454;
 }
 
@@ -14,11 +14,11 @@ code {
     color: #545454;
 }
 
-pre.pygments code {
+pre.rouge code {
     background: none !important;
 }
 
-pre.pygments .tok-err {
+pre.rouge .tok-err {
   	border: none !important;
   }
 
@@ -40,7 +40,7 @@ code-tabs.code-tabs__initialized {
 		font-size: .9em;
 
         &.active {
-            border-bottom: var(--orange-line-thickness) solid var(--gg-orange);
+            border-bottom: var(--orange-line-thickness) solid var(--link-color);
         }
 		&.grey {
 		  color: grey;

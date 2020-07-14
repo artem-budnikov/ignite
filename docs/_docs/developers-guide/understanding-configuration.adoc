@@ -11,17 +11,15 @@ class.
 You can set the parameters either programmatically or via an XML configuration file.
 These 2 ways are fully interchangeable.
 
-The XML configuration file is a Spring Bean definition file that must
-contain the `IgniteConfiguration` bean. When starting a node from the
-command line, pass the configuration file as a parameter to the
-`ignite.sh|bat` script, as follows:
+The XML configuration file is a Spring Bean definition file that must contain the `IgniteConfiguration` bean.
+When starting a node from the command line, pass the configuration file as a parameter to the `ignite.sh|bat` script, as follows:
 
 [source,shell]
 ----
 ignite.sh ignite-config.xml
 ----
 
-If you don't specify a configuration file, the default file `{IGNITE_HOME}/config/default-config.xml` will be used.
+If you don't specify a configuration file, the default file `{IGNITE_HOME}/config/default-config.xml` is used.
 
 == Spring XML Configuration
 

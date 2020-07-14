@@ -36,9 +36,13 @@
         margin: 0.3em 0;
         display: inline-block;
 
+        &:hover {
+          color: var(--link-color);
+        }
+
         &.active {
             --border-width: var(--orange-line-thickness);
-            border-left: var(--border-width) solid ;
+            border-left: var(--border-width) solid var(--link-color);
             color: #393939;
         }
     }

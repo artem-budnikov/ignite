@@ -82,7 +82,7 @@ include::code-snippets/cpp/src/setting_work_directory.cpp[tag=setting-work-direc
 == Enabling Modules
 
 Ignite ships with a number of modules that provide various
-functionality. You can import modules one by one, as required.
+functionality. You can enable modules one by one, as required.
 
 All modules are included in the binary distribution, but by default they
 are disabled (except for the `ignite-core`, `ignite-spring`, and

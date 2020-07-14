@@ -74,22 +74,26 @@ The proper procedure to perform a graceful shutdown is as follows:
 //tag::stop-commands[]
 * programmatically call `Ignite.close()`
 * programmatically call `System.exit()`
-* send a user interrupt signal. GridGain uses a JVM shutdown hook to execute custom logic before the JVM stops. If you start the node by running `ignite.sh` and don't detach it from the terminal, you can stop the node by hitting `Ctrl+C`.
+* send a user interrupt signal. Ignite uses a JVM shutdown hook to execute custom logic before the JVM stops.
+If you start the node by running `ignite.sh` and don't detach it from the terminal, you can stop the node by hitting `Ctrl+C`.
 //end::stop-commands[]
 . Remove the node from the link:developers-guide/baseline-topology[baseline topology]. This step may not be necessary if link:developers-guide/baseline-topology#baseline-topology-autoadjustment[baseline auto-adjustment] is enabled.
 
+////
 If you use these commands on a node that _is_ in the baseline topology,
-the node will shut down without waiting for the completion of the rebalancing process.
+the node shuts down without waiting for the completion of the rebalancing process.
 You can set the `IGNITE_WAIT_FOR_BACKUPS_ON_SHUTDOWN` system property to `true` if you want to wait for backup partitions to be moved to other nodes before the shutdown.
 See the <<Preventing Partition Loss on Shutdown,next section>> for details.
+////
 
-Removing the node from the baseline topology will start the rebalancing process on the remaining nodes.
+Removing the node from the baseline topology starts the rebalancing process on the remaining nodes.
 If you plan to restart the node shortly after shutdown, you don't have to do the rebalancing.
 In this case, do not remove the nodes from the baseline topology.
 
 
 
 
+////
 
 === Preventing Partition Loss on Shutdown
 
@@ -98,14 +102,12 @@ TODO: is this section valid for ignite?
 WARNING: This feature is experimental.
 
 When you simultaneously stop more nodes than the number of partition backups, some partitions may become unavailable to the remaining nodes (because both the primary and backup copies of the partition happen to be on the nodes that were shut down).
-For example, if the number of backups for a cache is set to 1 and you stop 2 nodes, there is a chance that both the primary and backup copy of a partition will become unavailable to the rest of the cluster.
+For example, if the number of backups for a cache is set to 1 and you stop 2 nodes, there is a chance that both the primary and backup copy of a partition becomes unavailable to the rest of the cluster.
 The proper way of dealing with this situation is to stop one node, rebalance the data, and then wait until the rebalancing is finished before stopping the next node, and so on.
 However, when the shutdown is triggered automatically (for example, when you do rolling upgrades or scaling the cluster in Kubernetes), you have no mechanism to wait for the completion of the rebalancing process and so you may lose data.
 
 To prevent this situation, you can define a system property (`IGNITE_WAIT_FOR_BACKUPS_ON_SHUTDOWN`) that delays the shutdown of a node until the shutdown does not lead to a partition loss.
-The node will check if all the partitions are available to the remaining nodes and only then exit the process.
-//This has to do with the number of partition backups configured for caches.
-//This property is designed to prevent this situation.
+The node checks if all the partitions are available to the remaining nodes and only then exits the process.
 
 In other words, when the property is set, you won't be able to stop more than `min(CacheConfiguration.backups) + 1` nodes at a time without waiting until the data is rebalanced.
 This is only applicable if you have at least one cache with partition backups and the node is stopped properly, i.e. using the commands described in the previous section:
@@ -130,7 +132,7 @@ You will have to terminate the process by sending the `kill -9` signal.
 If you want to shut down the entire cluster, link:administrators-guide/control-script#deactivating-cluster[deactivate] it and then stop all the nodes.
 Alternatively, you can stop all the nodes non-gracefully (by sending `kill -9`).
 However, the latter option is not recommended for clusters with persistence.
-
+////
 
 == Setting JVM Options
 
