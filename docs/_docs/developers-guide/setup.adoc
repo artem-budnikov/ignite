@@ -40,7 +40,7 @@ There are several ways you can change the default work directory:
 
 . As an environmental variable:
 +
-[source, text]
+[source, shell]
 ----
 export IGNITE_WORK_DIR=/path/to/work/directory
 ----
