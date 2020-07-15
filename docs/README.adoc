@@ -1,6 +1,6 @@
 = Apache Ignite Documentation
 :toc:
-
+:toc-title:
 
 == How to Build
 
@@ -28,7 +28,7 @@ Open `http://localhost:4000/docs[window=_blank]` in your browser.
 
 === Run with Docker
 
-The following command downloads jekyll docker image and all dependencies. Run the command in the “/docs” directory.
+The following command downloads the jekyll docker image and all dependencies. Run the command in the “/docs” directory.
 
 [source, shell]
 ----

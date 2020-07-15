@@ -64,56 +64,54 @@
           url: /developers-guide/clustering/zookeeper-discovery
         - title: Discovery in the Cloud
           url: /developers-guide/clustering/discovery-in-the-cloud
-#    - title: Data Modeling 
-#      items: 
-#        - title: Introduction
-#          url: /developers-guide/data-modeling/data-modeling
-#        - title: Data Partitioning
-#          url: /developers-guide/data-modeling/data-partitioning
-#        - title: Affinity Colocation 
-#          url: /developers-guide/data-modeling/affinity-collocation
-#    - title: Configuring Memory 
-#      items:
-#        - title: Memory Architecture
-#          url: /developers-guide/memory-centric-storage
-#        - title: Configuring Data Regions
-#          url: /developers-guide/memory-configuration/data-regions
-#        - title: Eviction Policies
-#          url: /developers-guide/memory-configuration/eviction-policies        
-#        - title: Memory Quotas for SQL Queries
-#          url: /developers-guide/memory-configuration/memory-quotas
-#    - title: Configuring Caches
-#      items:
-#        - title: Cache Configuration 
-#          url: /developers-guide/configuring-caches/configuration-overview 
-#        - title: Configuring Partition Backups
-#          url: /developers-guide/configuring-caches/configuring-backups
-#        - title: Atomicity Modes
-#          url: /developers-guide/configuring-caches/atomicity-modes
-#        - title: Expiry Policy
-#          url: /developers-guide/configuring-caches/expiry-policies
-#        - title: On-Heap Caching
-#          url: /developers-guide/memory-configuration/on-heap-caching
-#        - title: Managing Data Distribution 
-#          url: /developers-guide/configuring-caches/managing-data-distribution
-#        - title: Cache Groups 
-#          url: /developers-guide/configuring-caches/cache-groups
-#    - title: Persistence
-#      items:
-#        - title: Ignite Persistence
-#          url: /developers-guide/persistence/native-persistence
-#        - title: External Storage
-#          url: /developers-guide/persistence/external-storage
-#        - title: Swapping
-#          url: /developers-guide/persistence/swap 
-#        - title: Implementing Custom Cache Store
-#          url: /developers-guide/persistence/custom-cache-store
-#    - title: Baseline Topology
-#      url: /developers-guide/baseline-topology
+    - title: Data Modeling 
+      items: 
+        - title: Introduction
+          url: /developers-guide/data-modeling/data-modeling
+        - title: Data Partitioning
+          url: /developers-guide/data-modeling/data-partitioning
+        - title: Affinity Colocation 
+          url: /developers-guide/data-modeling/affinity-collocation
+    - title: Configuring Memory 
+      items:
+        - title: Memory Architecture
+          url: /developers-guide/memory-architecture
+        - title: Configuring Data Regions
+          url: /developers-guide/memory-configuration/data-regions
+        - title: Eviction Policies
+          url: /developers-guide/memory-configuration/eviction-policies        
+    - title: Configuring Caches
+      items:
+        - title: Cache Configuration 
+          url: /developers-guide/configuring-caches/configuration-overview 
+        - title: Configuring Partition Backups
+          url: /developers-guide/configuring-caches/configuring-backups
+        - title: Atomicity Modes
+          url: /developers-guide/configuring-caches/atomicity-modes
+        - title: Expiry Policy
+          url: /developers-guide/configuring-caches/expiry-policies
+        - title: On-Heap Caching
+          url: /developers-guide/configuring-caches/on-heap-caching
+        - title: Managing Data Distribution 
+          url: /developers-guide/configuring-caches/managing-data-distribution
+        - title: Cache Groups 
+          url: /developers-guide/configuring-caches/cache-groups
+    - title: Persistence
+      items:
+        - title: Ignite Persistence
+          url: /developers-guide/persistence/native-persistence
+        - title: External Storage
+          url: /developers-guide/persistence/external-storage
+        - title: Swapping
+          url: /developers-guide/persistence/swap 
+        - title: Implementing Custom Cache Store
+          url: /developers-guide/persistence/custom-cache-store
+    - title: Baseline Topology
+      url: /developers-guide/baseline-topology
 #    - title: Data Rebalancing
 #      url: /developers-guide/data-rebalancing 
-#    - title: Partition Loss Policy
-#      url: /developers-guide/partition-loss-policy
+    - title: Partition Loss Policy
+      url: /developers-guide/partition-loss-policy
 #    - title: Data Streaming
 #      url: /developers-guide/data-streaming
 #    - title: Using Key-Value Cache API
@@ -176,12 +174,12 @@
 #          url: /developers-guide/events/listening-to-events
 #        - title: Events 
 #          url: /developers-guide/events/events
-#    - title: Near Caches
-#      url: /developers-guide/near-cache
+    - title: Near Caches
+      url: /developers-guide/near-cache
 #    - title: .NET Platform Cache
 #      url: /developers-guide/platform-cache
-#    - title: Peer Class Loading
-#      url: /developers-guide/peer-class-loading
+    - title: Peer Class Loading
+      url: /developers-guide/peer-class-loading
 #    - title: Handling Exceptions
 #      url: /developers-guide/handling-exceptions
 #
