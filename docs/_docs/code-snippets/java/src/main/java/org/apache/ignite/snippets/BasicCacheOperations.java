@@ -7,23 +7,13 @@ import org.apache.ignite.Ignition;
 import org.apache.ignite.cache.CacheAtomicityMode;
 import org.apache.ignite.configuration.CacheConfiguration;
 import org.apache.ignite.lang.IgniteFuture;
+import org.junit.jupiter.api.Test;
 
 public class BasicCacheOperations {
 
-    public static void main(String[] args) {
-        runAll();
-    }
-
-    public static void runAll() {
-        getCacheInstanceExample();
-        createCacheExample();
-        destroyCacheExaple();
-        atomicOperationsExample();
-        asyncExecutionExample();
-    }
-
-    public static void getCacheInstanceExample() {
-        Ignition.start(Util.getIgniteCfg());
+    @Test
+    void getCacheInstanceExample() {
+        Ignition.start();
         Ignition.ignite().createCache("myCache");
         // tag::getCache[]
         Ignite ignite = Ignition.ignite();
@@ -35,8 +25,9 @@ public class BasicCacheOperations {
         Ignition.ignite().close();
     }
 
-    public static void createCacheExample() {
-        Ignition.start(Util.getIgniteCfg());
+    @Test
+    void createCacheExample() {
+        Ignition.start();
         // tag::createCache[]
         Ignite ignite = Ignition.ignite();
 
@@ -51,8 +42,9 @@ public class BasicCacheOperations {
         Ignition.ignite().close();
     }
 
-    public static void destroyCacheExaple() {
-        Ignition.start(Util.getIgniteCfg());
+    @Test
+    void destroyCacheExaple() {
+        Ignition.start();
         Ignition.ignite().createCache("myCache");
         // tag::destroyCache[]
         Ignite ignite = Ignition.ignite();
@@ -64,8 +56,9 @@ public class BasicCacheOperations {
         Ignition.ignite().close();
     }
 
-    public static void atomicOperationsExample() {
-        try (Ignite ignite = Ignition.start(Util.getIgniteCfg())) {
+    @Test
+    void atomicOperationsExample() {
+        try (Ignite ignite = Ignition.start()) {
             ignite.createCache("myCache");
             // tag::atomic1[]
             IgniteCache<Integer, String> cache = ignite.cache("myCache");
@@ -101,8 +94,9 @@ public class BasicCacheOperations {
         }
     }
 
-    public static void asyncExecutionExample() {
-        try (Ignite ignite = Ignition.start(Util.getIgniteCfg())) {
+    @Test
+    void asyncExecutionExample() {
+        try (Ignite ignite = Ignition.start()) {
             // tag::async[]
             IgniteCompute compute = ignite.compute();
 

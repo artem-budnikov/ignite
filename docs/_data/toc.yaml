@@ -108,20 +108,20 @@
           url: /developers-guide/persistence/custom-cache-store
     - title: Baseline Topology
       url: /developers-guide/baseline-topology
-#    - title: Data Rebalancing
-#      url: /developers-guide/data-rebalancing 
+    - title: Data Rebalancing
+      url: /developers-guide/data-rebalancing 
     - title: Partition Loss Policy
       url: /developers-guide/partition-loss-policy
-#    - title: Data Streaming
-#      url: /developers-guide/data-streaming
-#    - title: Using Key-Value Cache API
-#      items:
-#        - title: Basic Cache Operations 
-#          url: /developers-guide/key-value-api/basic-cache-operations
-#        - title: Working with Binary Objects
-#          url: /developers-guide/key-value-api/binary-objects
-#        - title: Using Scan Queries
-#          url: /developers-guide/key-value-api/using-scan-queries
+    - title: Data Streaming
+      url: /developers-guide/data-streaming
+    - title: Using Key-Value Cache API
+      items:
+        - title: Basic Cache Operations 
+          url: /developers-guide/key-value-api/basic-cache-operations
+        - title: Working with Binary Objects
+          url: /developers-guide/key-value-api/binary-objects
+        - title: Using Scan Queries
+          url: /developers-guide/key-value-api/using-scan-queries
 #    - title: Using Continuous Queries
 #      url: /developers-guide/key-value-api/continuous-queries
 #    - title: Performing Transactions

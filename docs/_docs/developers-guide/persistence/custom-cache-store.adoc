@@ -25,11 +25,11 @@ To load the data on a single node, call `IgniteCache.localLoadCache()` on that n
 Cache store sessions are used to hold the context between multiple operations on the store and mainly employed to provide transactional support. The operations within one transaction are executed using the same database connection, and the connection is committed when the transaction commits.
 Cache store session is represented by an object of the `CacheStoreSession` class, which can be injected into your `CacheStore` implementation via the `@GridCacheStoreSessionResource` annotation.
 
-An example of how to implement a transactional cache store can be found on https://github.com/gridgain/gridgain/blob/master/examples/src/main/java/org/apache/ignite/examples/datagrid/store/jdbc/CacheJdbcPersonStore.java[GitHub].
+An example of how to implement a transactional cache store can be found on https://github.com/apache/ignite/blob/master/examples/src/main/java/org/apache/ignite/examples/datagrid/store/jdbc/CacheJdbcPersonStore.java[GitHub].
 
 == Example
 
-Below is an example of a non-transactional implementation of `CacheStore`. For an example of the implementation with support for transactions, please refer to the https://github.com/gridgain/gridgain/blob/master/examples/src/main/java/org/apache/ignite/examples/datagrid/store/jdbc/CacheJdbcPersonStore.java[CacheJdbcPersonStore.java] file on GitHub.
+Below is an example of a non-transactional implementation of `CacheStore`. For an example of the implementation with support for transactions, please refer to the https://github.com/apache/ignite/blob/master/examples/src/main/java/org/apache/ignite/examples/datagrid/store/jdbc/CacheJdbcPersonStore.java[CacheJdbcPersonStore.java] file on GitHub.
 
 
 

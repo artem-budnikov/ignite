@@ -25,7 +25,7 @@ import org.apache.ignite.resources.IgniteInstanceResource;
 public class CollocatedComputations {
 
     public static void main(String[] args) {
-        Ignite ignite = Util.startNode();
+        Ignite ignite = Ignition.start();
         HashSet<Long> keys = new HashSet<>();
         keys.add(1L);
         keys.add(2L);
