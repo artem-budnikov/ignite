@@ -11,20 +11,12 @@ import org.apache.ignite.configuration.IgniteConfiguration;
 import org.apache.ignite.stream.StreamReceiver;
 import org.apache.ignite.stream.StreamTransformer;
 import org.apache.ignite.stream.StreamVisitor;
+import org.junit.jupiter.api.Test;
 
 public class DataStreaming {
 
-    public static void main(String[] args) {
-        runAll();
-    }
-
-    public static void runAll() {
-        dataStreamerExample();
-        streamReceiverExample();
-        streamTransformerExample();
-    }
-
-    public static void dataStreamerExample() {
+    @Test
+    void dataStreamerExample() {
         try (Ignite ignite = Ignition.start()) {
             IgniteCache<Integer, String> cache = ignite.getOrCreateCache("myCache");
             //tag::dataStreamer1[]
@@ -44,10 +36,11 @@ public class DataStreaming {
         }
     }
 
-    public static void streamTransformerExample() {
+    @Test
+    void streamTransformerExample() {
         try (Ignite ignite = Ignition.start()) {
             //tag::streamTransformer[]
-            String[] text = { "hello", "world", "hello", "gridgain" };
+            String[] text = { "hello", "world", "hello", "Ignite" };
             CacheConfiguration<String, Long> cfg = new CacheConfiguration<>("wordCountCache");
 
             IgniteCache<String, Long> stmCache = ignite.getOrCreateCache(cfg);
@@ -77,7 +70,8 @@ public class DataStreaming {
         }
     }
 
-    public static void streamReceiverExample() {
+    @Test
+    void streamReceiverExample() {
         try (Ignite ignite = Ignition.start()) {
             ignite.getOrCreateCache("myCache");
             //tag::streamReceiver[]
@@ -96,6 +90,7 @@ public class DataStreaming {
         }
     }
 
+    @Test
     void poolSize() {
         //tag::pool-size[] 
         IgniteConfiguration cfg = new IgniteConfiguration();
@@ -103,6 +98,7 @@ public class DataStreaming {
 
         Ignite ignite = Ignition.start(cfg);
         //end::pool-size[] 
+        ignite.close();
     }
 
     // tag::stream-visitor[]
@@ -123,7 +119,8 @@ public class DataStreaming {
         return new HashMap<>();
     }
 
-    public static void streamVisitorExample() {
+    @Test
+    void streamVisitorExample() {
         try (Ignite ignite = Ignition.start()) {
             CacheConfiguration<String, Double> mrktDataCfg = new CacheConfiguration<>("marketData");
             CacheConfiguration<String, Instrument> instCfg = new CacheConfiguration<>("instruments");

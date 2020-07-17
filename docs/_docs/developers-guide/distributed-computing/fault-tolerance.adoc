@@ -1,7 +1,9 @@
 = Fault Tolerance
 :javaFile: {javaCodeDir}/FaultTolerance.java
 
-GridGain supports automatic job failover. In case of a node crash, jobs are automatically transferred to other available nodes for re-execution. As long as there is at least one node standing, no job is ever lost.
+Ignite supports automatic job failover. 
+In case of a node crash, jobs are automatically transferred to other available nodes for re-execution. 
+As long as there is at least one node standing, no job is ever lost.
 
 The global failover strategy is controlled by the `IgniteConfiguration.failoverSpi` property.
 

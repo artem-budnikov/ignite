@@ -2,9 +2,11 @@
 
 :javaFile: {javaCodeDir}/JobScheduling.java
 
-When jobs arrive at the destination node, they are submitted to a thread pool and scheduled for execution in random order. However, you can change job ordering by configuring `CollisionSpi`. The `CollisionSpi` interface provides a way to control how jobs are scheduled for processing on each node.
+When jobs arrive at the destination node, they are submitted to a thread pool and scheduled for execution in random order. 
+However, you can change job ordering by configuring `CollisionSpi`. 
+The `CollisionSpi` interface provides a way to control how jobs are scheduled for processing on each node.
 
-GridGain provides several implementations of the `CollisionSpi` interface:
+Ignite provides several implementations of the `CollisionSpi` interface:
 
 - `FifoQueueCollisionSpi` — simple FIFO ordering in multiple threads. This implementation is used by default;
 - `PriorityQueueCollisionSpi` — priority ordering;

@@ -45,7 +45,7 @@ public class WorkingWithBinaryObjects {
             System.out.println("Binary object:" + binaryPerson);
 
             //tag::binaryBuilder[]
-            BinaryObjectBuilder builder = ignite.binary().builder("com.gridgain.snippets.Person");
+            BinaryObjectBuilder builder = ignite.binary().builder("org.apache.ignite.snippets.Person");
 
             builder.setField("id", 2L);
             builder.setField("name", "SecondPerson");
@@ -62,7 +62,7 @@ public class WorkingWithBinaryObjects {
                 BinaryObjectBuilder bldr = entry.getValue().toBuilder();
 
                 //Update the field in the builder.
-                bldr.setField("name", "GridGain");
+                bldr.setField("name", "Ignite");
 
                 // Set new value to the entry.
                 entry.setValue(bldr.build());
@@ -116,7 +116,7 @@ public class WorkingWithBinaryObjects {
         binaryConf.setIdMapper(new MyBinaryIdMapper());
 
         BinaryTypeConfiguration binaryTypeCfg = new BinaryTypeConfiguration();
-        binaryTypeCfg.setTypeName("com.gridgain.snippets.*");
+        binaryTypeCfg.setTypeName("org.apache.ignite.snippets.*");
         binaryTypeCfg.setSerializer(new ExampleSerializer());
 
         binaryConf.setTypeConfigurations(Collections.singleton(binaryTypeCfg));

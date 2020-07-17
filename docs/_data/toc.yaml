@@ -39,8 +39,6 @@
 #          url: /installation-guide/kubernetes/azure-deployment
 #    - title: Google Kubernetes Engine
 #      url: /installation-guide/kubernetes/gke-deployment
-#    - title: RedHat OpenShift Deployment
-#      url: /installation-guide/kubernetes/openshift-deployment
 - title: Developer's Guide
   url: /developers-guide
   items:
@@ -92,8 +90,6 @@
           url: /developers-guide/configuring-caches/expiry-policies
         - title: On-Heap Caching
           url: /developers-guide/configuring-caches/on-heap-caching
-        - title: Managing Data Distribution 
-          url: /developers-guide/configuring-caches/managing-data-distribution
         - title: Cache Groups 
           url: /developers-guide/configuring-caches/cache-groups
     - title: Persistence
@@ -122,11 +118,11 @@
           url: /developers-guide/key-value-api/binary-objects
         - title: Using Scan Queries
           url: /developers-guide/key-value-api/using-scan-queries
-#    - title: Using Continuous Queries
-#      url: /developers-guide/key-value-api/continuous-queries
-#    - title: Performing Transactions
-#      url: /developers-guide/key-value-api/transactions
-#    - title: Working with SQL
+    - title: Using Continuous Queries
+      url: /developers-guide/key-value-api/continuous-queries
+    - title: Performing Transactions
+      url: /developers-guide/key-value-api/transactions
+    - title: Working with SQL
 #      items:
 #        - title: Introduction
 #          url: /developers-guide/SQL/sql-introduction
@@ -148,30 +144,30 @@
 #          url: /developers-guide/SQL/JDBC/jdbc-client-driver
 #        - title: Multiversion Concurrency Control
 #          url: /developers-guide/transactions/mvcc
-#    - title: SQL and Key-Value Usage
-#      url: /developers-guide/SQL/sql-key-value-storage
-#    - title: Distributed Computing 
-#      items:
-#        - title: Distributed Computing API 
-#          url: /developers-guide/distributed-computing/distributed-computing
-#        - title: Cluster Groups
-#          url: /developers-guide/distributed-computing/cluster-groups
-#        - title: Executor Service
-#          url: /developers-guide/distributed-computing/executor-service
-#        - title: MapReduce API
-#          url: /developers-guide/distributed-computing/map-reduce
-#        - title: Load Balancing 
-#          url: /developers-guide/distributed-computing/load-balancing
-#        - title: Fault Tolerance
-#          url: /developers-guide/distributed-computing/fault-tolerance
-#        - title: Job Scheduling
-#          url: /developers-guide/distributed-computing/job-scheduling
-#    - title: Colocating Computations with Data
-#      url: /developers-guide/collocated-computations
-#    - title: Working with Events
-#      items:
-#        - title: Enabling and Listenting to Events 
-#          url: /developers-guide/events/listening-to-events
+    - title: SQL and Key-Value Usage
+      url: /developers-guide/SQL/sql-key-value-storage
+    - title: Distributed Computing 
+      items:
+        - title: Distributed Computing API 
+          url: /developers-guide/distributed-computing/distributed-computing
+        - title: Cluster Groups
+          url: /developers-guide/distributed-computing/cluster-groups
+        - title: Executor Service
+          url: /developers-guide/distributed-computing/executor-service
+        - title: MapReduce API
+          url: /developers-guide/distributed-computing/map-reduce
+        - title: Load Balancing 
+          url: /developers-guide/distributed-computing/load-balancing
+        - title: Fault Tolerance
+          url: /developers-guide/distributed-computing/fault-tolerance
+        - title: Job Scheduling
+          url: /developers-guide/distributed-computing/job-scheduling
+    - title: Colocating Computations with Data
+      url: /developers-guide/collocated-computations
+    - title: Working with Events
+      items:
+        - title: Enabling and Listenting to Events 
+          url: /developers-guide/events/listening-to-events
 #        - title: Events 
 #          url: /developers-guide/events/events
     - title: Near Caches
@@ -266,22 +262,10 @@
 #        url: /administrators-guide/monitoring-metrics/metrics
 #      - title: System Views
 #        url: /administrators-guide/monitoring-metrics/system-views
-#      - title: Tools and Analytics
-#        items:
-#          - title: Visor CMD
-#            url: /administrators-guide/tools-analytics/visor-cmd
-#          - title: SQLLine
-#            url: /administrators-guide/tools-analytics/sqlline
-#          - title: Tableau
-#            url: /administrators-guide/tools-analytics/tableau
 #    - title: Capacity Planning
 #      url: /administrators-guide/capacity-planning
-#    - title: Empirical Estimation of Disk Capacity Usage
-#      url: /administrators-guide/empirical-estimation
 #    - title: Control Script
 #      url: /administrators-guide/control-script
-#    - title: Conflict Resolution
-#      url: /administrators-guide/conflicts-resolution
 #    - title: Performance and Troubleshooting Guide
 #      url: /perf-troubleshooting-guide/general-perf-tips
 #      items:

@@ -2,7 +2,8 @@
 
 :javaFile: {javaCodeDir}/IgniteExecutorService.java
 
-GridGain provides a distributed implementation of `java.util.concurrent.ExecutorService` that submits tasks to a cluster's server nodes for execution. The tasks are load balanced across the cluster nodes and are guaranteed to be executed as long as there is at least one node in the cluster.
+Ignite provides a distributed implementation of `java.util.concurrent.ExecutorService` that submits tasks to a cluster's server nodes for execution. 
+The tasks are load balanced across the cluster nodes and are guaranteed to be executed as long as there is at least one node in the cluster.
 
 ////
 TODO: C# unsupported?

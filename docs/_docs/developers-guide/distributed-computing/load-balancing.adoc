@@ -2,7 +2,7 @@
 
 :javaFile: {javaCodeDir}/LoadBalancing.java
 
-GridGain automatically load balances jobs produced by a link:developers-guide/distributed-computing/map-reduce[compute task] as well as individual tasks submitted via the distributed computing API. Individual tasks submitted via `IgniteCompute.run(...)` and other compute methods are treated as tasks producing a single job.
+Ignite automatically load balances jobs produced by a link:developers-guide/distributed-computing/map-reduce[compute task] as well as individual tasks submitted via the distributed computing API. Individual tasks submitted via `IgniteCompute.run(...)` and other compute methods are treated as tasks producing a single job.
 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -14,7 +14,7 @@ IgniteCompute.execute(ComputeTask) -> splits into multiple jobs
 
 ////////////////////////////////////////////////////////////////////////////////
 
-By default, GridGain uses a round-robin algorithm (`RoundRobinLoadBalancingSpi`), which distributes jobs in sequential order across the nodes specified for the compute task.
+By default, Ignite uses a round-robin algorithm (`RoundRobinLoadBalancingSpi`), which distributes jobs in sequential order across the nodes specified for the compute task.
 
 [NOTE]
 ====

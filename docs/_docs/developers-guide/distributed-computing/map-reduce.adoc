@@ -4,13 +4,13 @@
 
 == Overview
 
-GridGain provides an API for performing simplified MapReduce operations.
+Ignite provides an API for performing simplified MapReduce operations.
 The MapReduce pattern is based on the assumption that the task that you
 want to execute can be split into multiple jobs (the mapping phase),
 with each job executed separately. The results produced by each job are
 aggregated into the final results (the reducing phase).
 
-In a distributed system such as GridGain, the jobs are distributed between
+In a distributed system such as Ignite, the jobs are distributed between
 the nodes according to the preconfigured link:developers-guide/distributed-computing/load-balancing[load balancing strategy] and the results are aggregated on the node that submitted the task.
 
 The MapReduce pattern is provided by the `ComputeTask` interface.
@@ -79,13 +79,13 @@ There are several helper classes that provide most commonly used implementations
 
 * `ComputeTaskSplitAdapter` — This class extends `ComputeTaskAdapter` and implements the `map(...)` method to automatically assign jobs to nodes. It introduces a new `split(...)` method that implements the logic of producing jobs based on the input data.
 
-See https://github.com/gridgain/gridgain/blob/master/modules/core/src/main/java/org/apache/ignite/compute/ComputeTaskSplitAdapter.java[ComputeTaskSplitAdapter.java,window=_blank] and https://github.com/gridgain/gridgain/blob/master/modules/core/src/main/java/org/apache/ignite/compute/ComputeTaskAdapter.java[ComputeTaskAdapter.java,window=_blank] for details.
+See {githubUrl}/modules/core/src/main/java/org/apache/ignite/compute/ComputeTaskSplitAdapter.java[ComputeTaskSplitAdapter.java,window=_blank] and {githubUrl}/modules/core/src/main/java/org/apache/ignite/compute/ComputeTaskAdapter.java[ComputeTaskAdapter.java,window=_blank] for details.
 
 == Distributed Task Session
 
 NOTE: Not available in .NET/C#/C++.
 
-For each task, GridGain creates a distributed session that holds information about the task and is visible to the task itself and to all jobs spawned by it. You can use this session to share attributes between jobs. Attributes can be assigned before or during job execution and become visible to other jobs in the same order in which they were set.
+For each task, Ignite creates a distributed session that holds information about the task and is visible to the task itself and to all jobs spawned by it. You can use this session to share attributes between jobs. Attributes can be assigned before or during job execution and become visible to other jobs in the same order in which they were set.
 
 [tabs]
 --
